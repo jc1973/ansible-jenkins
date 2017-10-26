@@ -1,0 +1,12 @@
+---
+#       ['https://pkg.jenkins.io/debian-stable', 'https://pkg.jenkins.io/debian-stable/jenkins.io.key']
+
+- name: Add an Apt signing key, will not download if present
+  apt_key:
+    url: "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
+    state: present
+
+# Add source repository into sources list.
+- apt_repository:
+    repo: "deb https://pkg.jenkins.io/debian-stable"
+    state: present
