@@ -1,0 +1,14 @@
+---
+# This playbook deploys jenkins
+
+- name: install java on all nodes
+  hosts: all
+  remote_user: root
+  roles:
+    - java
+
+- name: install jenkins
+  hosts: all
+  remote_user: root
+  roles:
+    - jenkins

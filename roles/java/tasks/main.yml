@@ -1,0 +1,12 @@
+---
+# This playbook installs openjdk
+
+- name: install openjdk on redhat based systems
+  yum: name=java-1.8.0-openjdk state=present
+  tags: openjdk-1.8.0
+  when: ansible_os_family == "RedHat"
+
+- name: install openjdk on debian based systems
+  apt: name=openjdk-8-jdk state=present
+  tags: openjdk-1.8.0
+  when: ansible_os_family == "Debian"
