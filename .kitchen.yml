@@ -1,6 +1,8 @@
 ---
 driver:
   name: vagrant
+  network:
+  - [ "forwarded_port", {guest: 8080, host: 8080} ]
 
 provisioner:
   # use an ansible playbook to provision our server
