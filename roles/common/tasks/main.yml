@@ -24,6 +24,7 @@
     - wget
     - man
     - git
+    - mlocate
     - bind-utils
   when: ansible_os_family == "RedHat"
 
@@ -36,5 +37,6 @@
     - iftop
     - curl
     - wget
+    - mlocate
     - git
   when: ansible_os_family == "Debian"
