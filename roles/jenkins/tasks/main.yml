@@ -27,6 +27,12 @@
     name: jenkins
     state: started
 
+# - shell: /usr/bin/ps -aef | grep jenkins
+#   register: result
+#   until: result.stdout.find("jenkins") != -1
+#   retries: 5
+#   delay: 10
+# 
 # - name: Wait for Jenkins to start up
 #   uri:
 #     url: http://localhost:8080
@@ -34,10 +40,9 @@
 #     timeout: 5
 #   register: jenkins_service_status
 #   # Keep trying for 5 mins in 5 sec intervals
-#   retries: 60
+#   retries: 10
 #   delay: 5
 #   until: >
-#      'status' in jenkins_service_status and
 #      jenkins_service_status['status'] == 200
 
 # see https://stackoverflow.com/questions/42219781/gets-error-cannot-get-csrf-when-trying-to-install-jenkins-plugin-using-ansible
