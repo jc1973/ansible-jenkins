@@ -9,3 +9,14 @@
 
 #      ['https://pkg.jenkins.io/debian-stable', 'https://pkg.jenkins.io/debian-stable/jenkins.io.key']
 #      ['https://pkg.jenkins.io/redhat-stable', 'https://pkg.jenkins.io/redhat-stable/jenkins.io.key']
+
+
+- name: install jenkins on redhat based systems
+  yum: name=jenkins state=present
+  tags: jenkins
+  when: ansible_os_family == "RedHat"
+
+- name: install jenkins on debian based systems
+  apt: name=jenkins state=present
+  tags: jenkins
+  when: ansible_os_family == "Debian"
