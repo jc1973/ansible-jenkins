@@ -1,10 +1,10 @@
 ---
 # This playbook contains plays that set up the repositories for jenkins and installs jenkins
 
-- include: configure_yum_repo.yml
+- import_tasks: configure_yum_repo.yml
   when: ansible_os_family == "RedHat"
 
-- include: configure_apt_repo.yml
+- import_tasks: configure_apt_repo.yml
   when: ansible_os_family == "Debian"
 
 #      ['https://pkg.jenkins.io/debian-stable', 'https://pkg.jenkins.io/debian-stable/jenkins.io.key']

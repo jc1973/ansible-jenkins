@@ -1,0 +1,103 @@
+ansible-playbook 2.4.0.0
+  config file = /Users/johcarte/.ansible.cfg
+  configured module search path = [u'/Users/johcarte/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /Library/Python/2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.10 (default, Feb  7 2017, 00:08:15) [GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)]
+Using /Users/johcarte/.ansible.cfg as config file
+Parsed /etc/ansible/hosts inventory source with ini plugin
+statically imported: /Users/johcarte/GIT/ansible-jenkins/roles/jenkins/tasks/configure_yum_repo.yml
+statically imported: /Users/johcarte/GIT/ansible-jenkins/roles/jenkins/tasks/configure_apt_repo.yml
+
+PLAYBOOK: site.yml ***********************************************************************************************************************************************************
+2 plays in site.yml
+
+PLAY [install java on all nodes] *********************************************************************************************************************************************
+
+TASK [Gathering Facts] *******************************************************************************************************************************************************
+Using module file /Library/Python/2.7/site-packages/ansible/modules/system/setup.py
+<10.20.1.188> ESTABLISH SSH CONNECTION FOR USER: root
+<10.20.1.188> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/Users/johcarte/.ansible/cp/8229fb1efa 10.20.1.188 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+Using module file /Library/Python/2.7/site-packages/ansible/modules/system/setup.py
+<10.20.1.189> ESTABLISH SSH CONNECTION FOR USER: root
+Using module file /Library/Python/2.7/site-packages/ansible/modules/system/setup.py
+<10.20.1.187> ESTABLISH SSH CONNECTION FOR USER: root
+<10.20.1.189> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/Users/johcarte/.ansible/cp/ea4f2373ea 10.20.1.189 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<10.20.1.187> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/Users/johcarte/.ansible/cp/2693a7f9eb 10.20.1.187 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<10.20.1.188> (255, '', 'Permission denied (publickey,password).\r\n')
+fatal: [10.20.1.188]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", 
+    "unreachable": true
+}
+<10.20.1.187> (255, '', 'Permission denied (publickey,password).\r\n')
+fatal: [10.20.1.187]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", 
+    "unreachable": true
+}
+<10.20.1.189> (255, '', 'Permission denied (publickey,password).\r\n')
+fatal: [10.20.1.189]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", 
+    "unreachable": true
+}
+	to retry, use: --limit @/Users/johcarte/GIT/ansible-jenkins/site.retry
+
+PLAY RECAP *******************************************************************************************************************************************************************
+10.20.1.187                : ok=0    changed=0    unreachable=1    failed=0   
+10.20.1.188                : ok=0    changed=0    unreachable=1    failed=0   
+10.20.1.189                : ok=0    changed=0    unreachable=1    failed=0   
+
+++++++++
+ansible-playbook 2.4.0.0
+  config file = /Users/johcarte/.ansible.cfg
+  configured module search path = [u'/Users/johcarte/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /Library/Python/2.7/site-packages/ansible
+  executable location = /usr/local/bin/ansible-playbook
+  python version = 2.7.10 (default, Feb  7 2017, 00:08:15) [GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)]
+Using /Users/johcarte/.ansible.cfg as config file
+Parsed /etc/ansible/hosts inventory source with ini plugin
+statically imported: /Users/johcarte/GIT/ansible-jenkins/roles/jenkins/tasks/configure_yum_repo.yml
+statically imported: /Users/johcarte/GIT/ansible-jenkins/roles/jenkins/tasks/configure_apt_repo.yml
+
+PLAYBOOK: site.yml ***********************************************************************************************************************************************************
+2 plays in site.yml
+
+PLAY [install java on all nodes] *********************************************************************************************************************************************
+
+TASK [Gathering Facts] *******************************************************************************************************************************************************
+Using module file /Library/Python/2.7/site-packages/ansible/modules/system/setup.py
+<10.20.1.188> ESTABLISH SSH CONNECTION FOR USER: root
+<10.20.1.188> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/Users/johcarte/.ansible/cp/8229fb1efa 10.20.1.188 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+Using module file /Library/Python/2.7/site-packages/ansible/modules/system/setup.py
+Using module file /Library/Python/2.7/site-packages/ansible/modules/system/setup.py
+<10.20.1.187> ESTABLISH SSH CONNECTION FOR USER: root
+<10.20.1.189> ESTABLISH SSH CONNECTION FOR USER: root
+<10.20.1.187> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/Users/johcarte/.ansible/cp/2693a7f9eb 10.20.1.187 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<10.20.1.189> SSH: EXEC ssh -C -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o User=root -o ConnectTimeout=10 -o ControlPath=/Users/johcarte/.ansible/cp/ea4f2373ea 10.20.1.189 '/bin/sh -c '"'"'echo ~ && sleep 0'"'"''
+<10.20.1.188> (255, '', 'Permission denied (publickey,password).\r\n')
+fatal: [10.20.1.188]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", 
+    "unreachable": true
+}
+<10.20.1.187> (255, '', 'Permission denied (publickey,password).\r\n')
+fatal: [10.20.1.187]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", 
+    "unreachable": true
+}
+<10.20.1.189> (255, '', 'Permission denied (publickey,password).\r\n')
+fatal: [10.20.1.189]: UNREACHABLE! => {
+    "changed": false, 
+    "msg": "Failed to connect to the host via ssh: Permission denied (publickey,password).\r\n", 
+    "unreachable": true
+}
+	to retry, use: --limit @/Users/johcarte/GIT/ansible-jenkins/site.retry
+
+PLAY RECAP *******************************************************************************************************************************************************************
+10.20.1.187                : ok=0    changed=0    unreachable=1    failed=0   
+10.20.1.188                : ok=0    changed=0    unreachable=1    failed=0   
+10.20.1.189                : ok=0    changed=0    unreachable=1    failed=0   
+

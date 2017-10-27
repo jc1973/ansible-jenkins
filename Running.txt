@@ -1,0 +1,1 @@
+ansible-playbook  --check -b -vvv site.yml  -e "ansible_ssh_user=johcarte"
