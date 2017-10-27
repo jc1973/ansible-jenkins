@@ -3,7 +3,7 @@
 
 - name: Add epel repository
   yum: name=epel-release
-  state: present
+#  state: present
   when: ansible_os_family == "RedHat"
 
 #- name: Import EPEL GPG key.
@@ -36,6 +36,5 @@
     - iftop
     - curl
     - wget
-    - man
     - git
   when: ansible_os_family == "Debian"
