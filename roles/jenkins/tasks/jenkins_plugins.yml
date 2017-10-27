@@ -1,0 +1,22 @@
+---
+
+- name: Install jenkins plugins
+  jenkins_plugin: name={{ item }}
+  with_items:
+    - build-pipeline-plugin
+#    - ant
+#    - antisamy-markup-formatter
+#    - build-timeout
+#    - durable-task
+#    - email-ext
+#    - github-branch-source
+#    - gradle
+#    - ldap
+#    - matrix-auth
+#    - pam-auth
+#    - pipeline-github-lib
+#    - ssh-slaves
+#    - subversion
+#    - timestamper
+#    - workflow-aggregator
+#    - ws-cleanup
