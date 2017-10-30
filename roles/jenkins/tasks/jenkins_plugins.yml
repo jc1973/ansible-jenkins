@@ -1,22 +1,47 @@
 ---
 
+# - name: Install jenkins plugins
+#   jenkins_plugin: name=ant
+# 
 - name: Install jenkins plugins
   jenkins_plugin: name={{ item }}
   with_items:
     - build-pipeline-plugin
-#    - ant
-#    - antisamy-markup-formatter
-#    - build-timeout
-#    - durable-task
-#    - email-ext
-#    - github-branch-source
-#    - gradle
-#    - ldap
-#    - matrix-auth
-#    - pam-auth
-#    - pipeline-github-lib
-#    - ssh-slaves
-#    - subversion
-#    - timestamper
-#    - workflow-aggregator
-#    - ws-cleanup
+    - timestamper
+    - credentials-binding
+    - email-ext
+    - build-timeout
+    - workflow-aggregator
+    - pipeline-stage-view
+    - ant
+    - github-branch-source
+    - ssh-slaves
+    - pipeline-github-lib
+    - matrix-auth
+    - mailer
+    - antisamy-markup-formatter
+    - gradle
+    - pam-auth
+    - git
+    - ws-cleanup
+    - subversion
+    - ldap
+# # not sure about the following:
+# #    cloudbees-folder
+# # initial stab
+# #    - ant
+# #    - antisamy-markup-formatter
+# #    - build-timeout
+# #    - durable-task
+# #    - email-ext
+# #    - github-branch-source
+# #    - gradle
+# #    - ldap
+# #    - matrix-auth
+# #    - pam-auth
+# #    - pipeline-github-lib
+# #    - ssh-slaves
+# #    - subversion
+# #    - timestamper
+# #    - workflow-aggregator
+# #    - ws-cleanup
