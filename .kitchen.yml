@@ -15,6 +15,13 @@ provisioner:
 
 platforms:
   - name: ubuntu-16.04
+    driver:
+      network:
+      - [ "forwarded_port", {guest: 8080, host: 9080} ]
+  - name: centos-7
+    driver:
+      network:
+      - [ "forwarded_port", {guest: 8080, host: 10080} ]
 
 suites:
   # suites found at /test/integration/$test-name
