@@ -14,6 +14,7 @@
     - workflow-aggregator
     - pipeline-stage-view
     - ant
+    - job-dsl
     - github-branch-source
     - ssh-slaves
     - pipeline-github-lib
