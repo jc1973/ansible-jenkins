@@ -27,6 +27,7 @@
     - ws-cleanup
     - subversion
     - ldap
+  notify: restart jenkins
 # # not sure about the following:
 # #    cloudbees-folder
 # # initial stab
