@@ -23,6 +23,7 @@
     - curl
     - wget
     - man
+    - ruby
     - git
     - mlocate
     - bind-utils
@@ -37,6 +38,7 @@
     - iftop
     - curl
     - wget
+    - ruby
     - mlocate
     - git
   when: ansible_os_family == "Debian"
