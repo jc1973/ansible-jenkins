@@ -3,3 +3,8 @@ job('bash-hello') {
         shell('echo Hello bash!')
     }
 }
+job('get-env') {
+  steps {
+    shell('env')
+  }
+}
