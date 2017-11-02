@@ -1,5 +1,5 @@
 job('perl-hello') {
     steps {
-        shell('perl -E "print \\\"Hello perl\\\n\\\";"')
+        shell('perl -E "print \\\"Hello perl\\\""')
     }
 }
