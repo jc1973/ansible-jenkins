@@ -3,9 +3,9 @@ def jobs_dir = script_dir + "/jobs"
 
 //new File("jobs").eachFile() { file->  
 new File(jobs_dir).eachFile() { file->  
-  println file.getName();
+//  println file.getName();
   def filename = jobs_dir + "/" + file.getName()
-  println filename
+//  println filename
   evaluate(new File(filename))
 
 
