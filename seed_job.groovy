@@ -1,4 +1,6 @@
-def script_dir = new File(getClass().protectionDomain.codeSource.location.path).parent
+def env = System.getenv()
+def script_dir = env['WORKSPACE']
+// def script_dir = new File(getClass().protectionDomain.codeSource.location.path).parent
 def jobs_dir = script_dir + "/jobs"
 
 //new File("jobs").eachFile() { file->  
